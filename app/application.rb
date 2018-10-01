@@ -6,6 +6,7 @@ class Application
     req = Rack::Request.new(env)
     resp.finish
 
-    @@items = []
+    @@items.each do |item|
+    end
   end
 end
