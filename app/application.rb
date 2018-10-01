@@ -1,6 +1,6 @@
 class Application
   @@items = []
-
+  #Dynamic url routes call upon a different class and rb file
   def call(env)
     resp = Rack::Response.new
     req = Rack::Request.new(env)
