@@ -9,5 +9,6 @@ class Application
       resp.write "{item.name}\n"
     end
 
+    resp.finish
   end
 end
