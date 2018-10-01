@@ -7,7 +7,7 @@ class Application
     resp.finish
 
     @@items.each do |item|
-      resp.write "item.name"
+      resp.write "{item.name}\n"
     end
   end
 end
