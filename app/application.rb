@@ -16,6 +16,7 @@ class Application
       resp.write item.price #price and name are the two attributes of the item class
     else
       resp.status = 404
+    else
     end
 
     resp.finish
