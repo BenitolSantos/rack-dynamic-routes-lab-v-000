@@ -9,8 +9,10 @@ class Application
       resp.write "{item.name}\n"
     end
 
-    if req.path=="/items/#{item_name}"
+    if req.path.match(/items/)
+
 
     resp.finish
+  end
   end
 end
