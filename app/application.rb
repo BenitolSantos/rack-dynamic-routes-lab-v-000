@@ -20,6 +20,7 @@ class Application
       end
     else #returns 404 status code for a bad route
       resp.status = 404
+      resp.write "Route not found"
     end
 
     resp.finish
