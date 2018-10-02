@@ -15,7 +15,6 @@ class Application
       item = @@items.find{|i| item.name == item_name}
       if item
       resp.write item.price #price and name are the two attributes of the item class
-        
       else
         resp.write "Item not found"
         resp.status = 400
