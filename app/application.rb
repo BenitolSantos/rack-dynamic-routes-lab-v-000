@@ -7,6 +7,7 @@ class Application
 
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last #uses regex to split and remove the folder
+      #remember that split needs to be on a string
       #ex; turn /songs/Sorry into Sorry
       item = @@items.find{|i| i.name == item_name}
       if item
