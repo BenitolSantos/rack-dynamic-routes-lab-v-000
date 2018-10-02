@@ -12,8 +12,8 @@ class Application
     if req.path.match(/items/)
       item_name = req.path.split(/items/).last #uses regex to split and remove the folder
       #ex; turn /songs/Sorry into Sorry
-      item = @@items.find{|i| item.name == item_name}
-      if item != nil
+      
+      if item = @@items.find{|i| item.name == item_name}
       resp.write item.price #price and name are the two attributes of the item class
       else
         resp.write "Item not found"
