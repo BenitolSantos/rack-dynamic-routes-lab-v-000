@@ -13,12 +13,12 @@ class Application
       item_name = req.path.split(/items/).last #uses regex to split and remove the folder
       #ex; turn /songs/Sorry into Sorry
       item = @@items.find{|i| item.name == item_name}
-      if 
+      if item
       resp.write item.price #price and name are the two attributes of the item class
-      elsif nil
+        
+      else
         resp.write "Item not found"
         resp.status = 400
-      else
       end
     else #returns 404 status code for a bad route
       resp.status = 404
