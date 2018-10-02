@@ -16,6 +16,7 @@ class Application
       if item != nil
       resp.write item.price #price and name are the two attributes of the item class
       else
+        resp.write "Item not found"
         resp.status = 400
       end
     else #returns 404 status code for a bad route
