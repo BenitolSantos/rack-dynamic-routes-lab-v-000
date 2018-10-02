@@ -16,8 +16,9 @@ class Application
       item = @@items.find{|i| item.name == item_name}
       resp.write item.price #price and name are the two attributes of the item class
       else
+        
       end
-    else #returns 400 status code for a bad route
+    else #returns 404 status code for a bad route
       resp.status = 404
     end
 
